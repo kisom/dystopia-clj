@@ -15,6 +15,7 @@ automation suite to handle getting dependencies and setting up the Java
 environment. You should take a look through the project's 
 [README]
 but the quick way is to do the following:
+
 0. download the [lein](https://raw.github.com/technomancy/leiningen/stable/bin/lein)
 script
 0. make the lein script executable and place it on your path
@@ -25,8 +26,8 @@ script
 ## License
 
 Distributed under an ISC / public domain dual-license.
---------------------------------------------------------------------------------
 
+{% codeblock %}
 the ISC license:
 Copyright (c) 2011 Kyle Isom <coder@kyleisom.net>
 
@@ -42,7 +43,7 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. 
 
---------------------------------------------------------------------------------
+{% endcodeblock %}
 
 you may choose to follow this license or public domain. my intent with
 dual-licensing this code is to afford you, the end user, maximum freedom
