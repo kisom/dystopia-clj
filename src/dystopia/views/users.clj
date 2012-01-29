@@ -15,7 +15,7 @@
   (label "password" "Password:")
   (text-field "password" password))
 
-(defpage  [:post "/login"] {:as user}
+(defpage  [:any "/login"] {:as user}
   (if (valid-login-form? user)
     (common/layout
      (form-to [:post "/login"]

@@ -1,6 +1,5 @@
 (ns dystopia.views.welcome
-  (:require [dystopia.views.common :as common]
-            [noir.content.getting-started])
+  (:require [dystopia.views.common :as common])
   (:use [noir.core :only [defpage]]
         [hiccup.core :only [html]]))
 
