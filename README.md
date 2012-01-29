@@ -28,6 +28,7 @@ script
 Distributed under an ISC / public domain dual-license.
 
 > the ISC license:
+>
 > Copyright (c) 2012 Kyle Isom <coder@kyleisom.net>
 >
 > Permission to use, copy, modify, and distribute this software for any
