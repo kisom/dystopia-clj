@@ -9,18 +9,23 @@
 ;;Should probably be an env var TODO
 (def BOOK_DIR "/books/")
 
-(def request (atom {}))
+;;Not implemented yet, should pull the filetype from the end of
+;;the filename so we can sort it into folders and append to the
+;;end of the generated name.
+(defn getFiletype
+  "Tries to get the filetype from the filename."
+  [filename]
+  ())
 
-;;Simple proof on concept, TODO file type categorizing
+;;TODO: update database info once that's set up.
+
 (defpage [:post "/upload"] {:keys [book]}
-  (println book))
-  
-;;  (let [ebook (io/file (:tempfile book))
-;;        contents (slurp ebook)
-;;        location (concat BOOK_DIR (hash/hexdigest contents))]
-;;    (do
-;;      (io/copy ebook (io/file name))
-;;      (common/layout
-;;       (html
-;;        [:p "Thanks!"])))))
-      
+  (let [ebook (io/file (:tempfile book))
+        contents (slurp ebook)
+        location (apply str (concat BOOK_DIR (hash/hexdigest contents)))]
+    (do
+      (println location)
+      (io/copy ebook (io/file location))
+      (common/layout
+       (html
+        [:p "Thanks!"])))))

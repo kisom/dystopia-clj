@@ -8,6 +8,8 @@
          (common/layout
           [:p "Welcome to dystopia"]
           [:p "Upload a book"]
-          (form-to [:post "/upload"]
+          (form-to
+           {:enctype "multipart/form-data"}
+           [:post "/upload"]
                    (file-upload :book)
                    (submit-button "Upload"))))
